@@ -1,3 +1,8 @@
+<link href="schoolcss/Washington.css" rel="stylesheet" type="text/css" />
+<a href="index.html">Back</a>
+<div> </div>
+
+
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
 
@@ -15,13 +20,14 @@
   <!-- meta character set -->
   <meta charset="UTF-8" />
   <!-- Site Title -->
-  <title>Class-Connect</title>
+  <title>Washington High School</title>
 
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto:400,400i,500,700" rel="stylesheet" />
   <!--
-      CSS
+      CSS   
       =============================================
     -->
+   <link rel="stylesheet" href="forum Washingtonstyle.css" />
   <link rel="stylesheet" href="css/linearicons.css" />
   <link rel="stylesheet" href="css/font-awesome.min.css" />
   <link rel="stylesheet" href="css/bootstrap.css" />
@@ -56,7 +62,7 @@
                 Schools
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="American.html">American High School</a>
+                <a class="dropdown-item" href="Washington.html">Washington High School</a>
                 <a class="dropdown-item"
 href="Washington.html">Washington High School</a>
                 <a class="dropdown-item" href="link">Kennedy High School</a>
@@ -96,7 +102,8 @@ href="Washington.html">Washington High School</a>
             to learn and grow with your classmates
           </h1>
           <p class="mx-auto text-white  mt-20 mb-40">
-            Students are able to choose any high school in fusd, and ask questions to their peers based on their grade levels.
+            In the history of modern ComputerScience , there is probably no one
+            greater leap forward than the building and launch of the creation of this website know as the Class-connect
           </p>
         </div>
         <div class="offset-lg-2 col-lg-5 col-md-12 home-banner-right">
@@ -107,71 +114,76 @@ href="Washington.html">Washington High School</a>
   </section>
   <!-- ================ End banner Area ================= -->
 
-  <!-- ================ Start Feature Area ================= -->
-  <section class="feature-area">
-  
 
-
+        
+    <div class="top-bar">
+        <h1>
+            My Forum
+        </h1>
     </div>
-  </section>
-  <!-- ================ End Feature Area ================= -->
-
- 
-
-  
-
-  <!-- ================ Start Feature Area ================= -->
-  <section class="other-feature-area">
-    <div class="container">
-      <div class="feature-inner row">
-        <div class="col-lg-12">
-          <div class="section-title text-left">
-            <h2>
-              Meeting the</br> creators<br />
-
-            </h2>
-
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="other-feature-item">
-            <i class="ti-key"></i>
-            <h4>Ethan Shao </h4>
-            <div>
-              <p>
-              A rising freshman
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mt--160">
-          <div class="other-feature-item">
-            <i class="ti-files"></i>
-            <h4>Jasamarbir Singh Arora</h4>
-            <div>
-              <p>
-              I am a rising freshman, passonaite to make a difference using computer/data science
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mt--260">
-          <div class="other-feature-item">
-            <i class="ti-medall-alt"></i>
-            <h4>Ritvik M</h4>
-            <div>
-              <p>
-              Rising senior
-  
-        </div>
-      </div>
+    <div class="main">
+        <ol>
+        </ol>
     </div>
-  </section>
-  <!-- ================ End Feature Area ================= -->
-
-  
-
-
+    <script src="data.js"></script>
+    <script>
+        console.log(threads);
+        var container = document.querySelector('ol');
+        for (let thread of threads) {
+            var html = `
+            <li class="row">
+                <a href="/thread.html?${thread.id}">
+                    <h4 class="title">
+                        ${thread.title}
+                    </h4>
+                    <div class="bottom">
+                        <p class="timestamp">
+                            ${new Date(thread.date).toLocaleString()}
+                        </p>
+                        <p class="comment-count">
+                            ${thread.comments.length} comments
+                        </p>
+                    </div>
+                </a>
+            </li>
+            `
+            container.insertAdjacentHTML('beforeend', html);
+        }
+    </script>
+    <style>
+        body {
+            margin: 10px 60px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        h1, h4, ol {
+            margin: 0;
+        }
+        p {
+            margin: 5px 0;
+        }
+        .top-bar {
+            background-color: skyblue;
+            padding: 0 40px;
+        }
+        .main {
+            background-color: #F6F6EF;
+            padding: 10px 15px;
+        }
+        .row {
+            padding: 5px 0;
+        }
+        .bottom {
+            display: flex;
+            color: grey;
+            font-size: 12px;
+        }
+        .timestamp {
+            padding-right: 10px;
+        }
+    </style>
  
   <!-- ================ start footer Area ================= -->
   <footer class="footer-area section-gap">
@@ -206,6 +218,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <script src="js/waypoints.min.js"></script>
   <script src="js/jquery.nice-select.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="forumWashingtonmain.js"></script>
 </body>
 
 </html>
